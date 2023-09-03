@@ -84,3 +84,39 @@ Object.fromEntries([
 
 // 冻结
 Object.freeze(obj)
+
+// 相同性判断 
+// Object.is()
+console.log(Object.is(NaN, NaN), 'NaN, NaN')
+console.log(+0 === -0, '+0 === -0');
+console.log(Object.is(+0, -0), 'Object.is(+0, -0)')
+
+
+// Set 数据集合，保存一系列唯一的值
+const s = new Set()
+console.log(s, 's');
+s.add(1)
+s.add(2)
+s.add(3)
+console.log(s, 's');
+console.log(s.size);
+s.add(3)
+console.log(s, 's');
+s.delete(2)
+console.log(s, 's');
+const arr1 = s.values()
+console.log(arr1, 'arr1');
+// 数组去重
+const arr2 = [1, 1, 2, 2, 3, 3, 4, 5, 6, 5, 4]
+const newArr = [...new Set(arr2)]
+console.log(newArr, 'newArr')
+
+// Map 数据集合，保存一系列唯一的键值对，key唯一
+const m = new Map()
+m.set(12, 'sdsdsdsd')
+console.log(m, 'm');
+console.log(m.size, 'm.size');
+// Map.prototype.get()
+// Map.prototype.has()
+// Map.prototype.delete()
+
